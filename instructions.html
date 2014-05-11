@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>LCC Volunteers Instructional Screencast</title>
+		<script>
+		function load(s)
+		{
+			player = document.getElementById('player')
+			src = 'lcc-volunteers-' + s + '-screencast.mp4';
+			player.src = src
+			player.load();
+			reset_classnames();
+			document.getElementById(s).className='selected';
+		}
+		function reset_classnames()
+		{
+			document.getElementById('user').className='';
+			document.getElementById('admin').className='';
+		}
+		</script>
+		<style>
+		body
+		{
+			background:black;
+			margin:0 auto;
+			font-family: sans-serif;
+		}
+		video
+		{
+			max-width:100%;
+		}
+		.container{ text-align:center;}
+		#nav
+		{
+			text-align:left;
+			background:#777;
+			color:white;
+			margin-bottom: 20px;
+			padding:10px 30px 0;
+		}
+		#nav a
+		{
+			display:inline-block;
+			padding:20px 10px;
+			color: white;
+			text-decoration: none;
+			background:#666;
+			border-radius:6px 6px 0 0;
+		}
+		#nav a:hover,
+		#nav a.selected
+		{
+			background:#000;
+		}
+		</style>
+	</head>
+	<body>
+		<div id="nav">
+			Instructions:
+			<a href="#" id="user" onclick="load('user');return false;" class="selected">For Users</a>
+			<a href="#" id="admin" onclick="load('admin');return false;">For Ministry Team Leaders</a>
+			<a href="/volunteers/">Back to Volunteer Site</a>
+		</div>
+		<div class="container">
+			<video id="player" src="lcc-volunteers-user-screencast.mp4" controls="controls" preload="meta" />
+		</div>
+	</body>
+</html>

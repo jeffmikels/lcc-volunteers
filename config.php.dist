@@ -1,0 +1,12 @@
+<?php
+$site_domain = 'lafayettecc.org/v.devel';
+$site_url = 'http://' . $site_domain;
+$show_debug = TRUE;
+
+$v_conf = Array();
+$v_conf['dbhost']='localhost';
+$v_conf['dbuser']='';
+$v_conf['dbpass']='';
+$v_conf['dbname']='';
+
+?>
